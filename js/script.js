@@ -166,11 +166,16 @@ const app = Vue.createApp({
                         }
                     ],
                 }
-            ]
+            ],
+
+            activeIndex: 0
         }
     },
 
     methods: {
+        cambiaChat(i) {
+            this.contacts.activeIndex = i;
+        },
 
     }
 });
