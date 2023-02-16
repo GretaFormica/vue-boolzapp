@@ -97,9 +97,9 @@
             <!-- HEADER CHAT COL -->
             <header class="contacts-col--header d-flex justify-content-between p-2">
                 <div class="d-flex align-items-center">
-                    <img src="./img/avatar_1.jpg" class="avatar" alt="" />
+                    <img :src="'./img/avatar' + contacts[active].avatar + '.jpg'" class="avatar" alt="" />
                     <p class="my-0 mx-2">
-                        Michele<br />
+                        {{contacts[active].name}} <br /> 
                         <span class="latest-access">Ultimo accesso ore 12:00</span>
                     </p>
                 </div>
