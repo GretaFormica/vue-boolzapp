@@ -66,7 +66,10 @@
                 <div class="search-contacts--icon p-2">
                     <i class="fa-solid fa-magnifying-glass mx-2"></i>
                 </div>
-                <input class="p-2" type="text" placeholder="Cerca o inizia una nuova chat" />
+                <input class="p-2" 
+                    type="text" 
+                    placeholder="Cerca o inizia una nuova chat" 
+                    v-model="search"/>
             </div>
 
             <!-- LIST CONTACTS -->
@@ -76,15 +79,14 @@
                     v-for="(contact, i) in contacts">
 
                     <div class="contact--left d-flex flex-grow-1"
-                        @click="cambiaChat(i)">
+                        @click="cambiaChat(i)"
+                        v-if="contact.name.toLowerCase().includes(search)">
                         <img :src="['./img/avatar' + contact.avatar + '.jpg']" class="avatar" />
                         <p class="my-0 mx-2">
                             {{contact.name}}<br />
                             <span class="latest-access">Ultimo accesso ore 12:00</span>
                         </p>
                     </div>
-
-                    <span class="latest-access">12:00</span>
                 </li>
 
             </ul>

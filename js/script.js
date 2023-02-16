@@ -170,7 +170,8 @@ const app = Vue.createApp({
             ],
             
             active: 0,
-            NewText: ''
+            NewText: '',
+            search: ''
         }
     },
 
