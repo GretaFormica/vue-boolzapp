@@ -170,12 +170,20 @@ const app = Vue.createApp({
             ],
             
             active: 0,
+            NewText: ''
         }
     },
 
     methods: {
         cambiaChat(i) {
             this.active = i;
+        },
+
+        sendMes(i){
+            if (this.NewText !== ''){
+            this.contacts[i].messages.push({ date: '15:30', text: this.NewText, status: 'sent'});
+            this.NewText = '';
+            }
         },
 
     }
