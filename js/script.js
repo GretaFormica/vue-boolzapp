@@ -183,7 +183,14 @@ const app = Vue.createApp({
             if (this.NewText !== ''){
             this.contacts[i].messages.push({ date: '15:30', text: this.NewText, status: 'sent'});
             this.NewText = '';
+            this.answerMes(i)
             }
+        },
+
+        answerMes(i) {
+            setTimeout(()=>{
+                this.contacts[i].messages.push({ date: '15:30', text: 'ok', status: 'received'}); 
+             },1000);
         },
 
     }
