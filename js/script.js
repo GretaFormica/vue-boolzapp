@@ -165,16 +165,17 @@ const app = Vue.createApp({
                             status: 'received'
                         }
                     ],
-                }
-            ],
+                },
 
-            activeIndex: 0
+            ],
+            
+            active: 0,
         }
     },
 
     methods: {
         cambiaChat(i) {
-            this.contacts.activeIndex = i;
+            this.active = i;
         },
 
     }

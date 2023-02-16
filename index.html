@@ -112,7 +112,7 @@
             <div class="main-chat flex-grow-1 d-flex flex-column align-items-start">
 
                 <div class="message p-2 m-2"
-                    v-for="(message, i) in contacts[activeIndex].messages"
+                    v-for="(message, i) in contacts[active].messages"
                     :class="message.status">
                     <p class="p-0 m-0">
                         {{message.text}}
